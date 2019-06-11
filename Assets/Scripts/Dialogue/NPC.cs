@@ -16,7 +16,7 @@ public class NPC : MonoBehaviour
         dialogueSystem = FindObjectOfType<DialogueSystem>();   
     }
 
-    public void OnTriggerEnter(Collider col)
+    public void OnTriggerStay(Collider col)
     {
         gameObject.GetComponent<NPC>().enabled = true;
         FindObjectOfType<DialogueSystem>().EnterRangeOfNPC();
@@ -26,7 +26,7 @@ public class NPC : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {                
                 dialogueSystem.dialogueLines = sentences; //the sentences are sent to the dialogueSystem
-                dialogueSystem.name = npcName; //the npc name is sent to the dialogueSystem
+                dialogueSystem.npcName = npcName; //the npc name is sent to the dialogueSystem
                 FindObjectOfType<DialogueSystem>().NPCName(); 
             }            
         }

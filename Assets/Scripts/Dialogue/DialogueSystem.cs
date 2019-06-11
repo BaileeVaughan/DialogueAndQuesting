@@ -1,10 +1,4 @@
-﻿//I followed this tutorial:
-//https://www.youtube.com/watch?v=p4a_OYmk1uU&t=6s
-//but it still doesn't work
-//I did make some changes to better suit this simple project,
-//but I don't think it'd be too drastic as to stop the script from working
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +15,7 @@ public class DialogueSystem : MonoBehaviour
     public float letterMultiplier = 0.5f; //and the amount it is multiplied by when you hold the input down
 
     public string[] dialogueLines; //the dialogue content
+    public string npcName;
 
     public KeyCode dialogueInput = KeyCode.E; //interaction button
 
@@ -60,9 +55,10 @@ public class DialogueSystem : MonoBehaviour
     }
 
     private IEnumerator StartDialogue()
-    {
+    {        
         if (outOfRange == false)
         {
+            npcName = NPC.npcName;
             int dialogueLength = dialogueLines.Length;
             int currentDialogueIndex = 0;
             while (currentDialogueIndex < dialogueLength || !letterIsMultiplied)
