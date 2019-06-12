@@ -58,7 +58,7 @@ public class DialogueSystem : MonoBehaviour
     {        
         if (outOfRange == false)
         {
-            npcName = NPC.npcName;
+            nameText.text = NPC.npcName;
             int dialogueLength = dialogueLines.Length;
             int currentDialogueIndex = 0;
             while (currentDialogueIndex < dialogueLength || !letterIsMultiplied)

@@ -7,7 +7,7 @@ public class NPC : MonoBehaviour
 {
     private DialogueSystem dialogueSystem;
 
-    public static string npcName; //Input for the npc name
+    public static string npcName = "Dialogue Man"; //Input for the npc name
     [TextArea(5, 10)]
     public string[] sentences;
 
@@ -26,7 +26,6 @@ public class NPC : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {                
                 dialogueSystem.dialogueLines = sentences; //the sentences are sent to the dialogueSystem
-                dialogueSystem.npcName = npcName; //the npc name is sent to the dialogueSystem
                 FindObjectOfType<DialogueSystem>().NPCName(); 
             }            
         }
