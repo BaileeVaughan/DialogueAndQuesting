@@ -1,16 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-namespace QuestSystem
+[System.Serializable]
+public class Quest
 {
-    public class Quest
-    {
-        private IQuestText info;
-        public IQuestText Info
-        {
-            get { return info; }
-        }
-
-        private List<IQuestObjective> objectives;
-
-    }
+    public string title;
+    public string descrip;
+    public int reward;
+    public int clicks;
+    public bool isActive;
+    public bool isComplete;
 }
