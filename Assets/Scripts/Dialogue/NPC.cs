@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//The quest scripts were inspired by TheSenpaiCode's tutorial, but were changed to suit this project
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
